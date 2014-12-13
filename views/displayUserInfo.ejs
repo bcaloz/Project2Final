@@ -1,0 +1,30 @@
+<% include header %>
+
+<script src="https://www.sonoma.edu/js/jquery-tablestripes.js" type="text/javascript"></script>
+Submitted Data
+<!--% console.log(rs) %>-->
+    <table id="login" class="stripeMe">
+		<thead>
+		<tr>
+		<th>Username</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th>Post</th>
+		</thead>
+		<tbody>
+	
+    	 <tr>
+		 
+		 
+            <td><%= rs[0].Username %></td>
+			<td><%= rs[0].Email %></td>
+			<td><%= rs[0].Password %></td>
+			 <td><%= rs[0].Post %></td>
+			
+        </tr>
+		
+		</tbody>
+    </table>
+    <p><a href="../?">Go Back</a></p>
+
+<% include footer %>

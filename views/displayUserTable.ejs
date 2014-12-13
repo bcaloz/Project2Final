@@ -1,0 +1,31 @@
+<% include header %>
+<link rel="stylesheet" href="http://www.sonoma.edu/css/global/content.css" type="text/css" media="screen, projection, print" />
+<script src="https://www.sonoma.edu/js/jquery-tablestripes.js" type="text/javascript"></script>
+
+   <% if(rs.length > 0) { %>
+    <table>
+        <thead>
+		<tr>
+		<th>Username</th>
+		<th>Email</th>
+		
+		<th>Post</th>
+		</thead>
+		<tbody>
+		  <% for (var i=0; rs.length > i; i++) { %>
+    	 <tr>
+        <td><a href="/user/?AccountID=<%= rs[i].AccountID %>"> <%= rs[i].Username %></a></td>
+		 <td><%= rs[i].Email %></a></td>
+		   <td><%= rs[i].Post %></a></td>
+		   
+		   </tr>
+		    <% } %>
+		   </tbody>
+		   </table>
+		   
+		
+    <% } else { %>
+         No users are entered into the database.
+    <% } %>
+<p><a href="../?">Go Back</a></p>
+<% include footer %>
